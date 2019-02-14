@@ -6,6 +6,8 @@
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
     device/rr/sepolicy/qcom/private
 
+ifneq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_SEPOLICY_DIRS += \
     device/rr/sepolicy/qcom/common \
     device/rr/sepolicy/qcom/$(TARGET_BOARD_PLATFORM)
+endif
